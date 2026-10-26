@@ -1,0 +1,25 @@
+name: 🏦 Nueva receta (banco o billetera)
+description: Comparte cómo se lee la cartola de tu banco. Solo la receta, nunca tus movimientos. / Share how to read your bank's statement. Recipe only.
+labels: [receta]
+body:
+  - type: markdown
+    attributes:
+      value: "**No pegues tu cartola ni movimientos.** Solo el JSON de la receta (nombres de columnas y formatos). / **Don't paste your statement or transactions.**"
+  - type: input
+    id: banco
+    attributes:
+      label: Banco o billetera y país / Bank or wallet and country
+      placeholder: "Banco Ejemplo, Chile"
+    validations: { required: true }
+  - type: textarea
+    id: receta
+    attributes:
+      label: Receta (JSON) / Recipe (JSON)
+      render: json
+    validations: { required: true }
+  - type: checkboxes
+    id: probada
+    attributes:
+      label: ¿La probaste? / Did you test it?
+      options:
+        - label: La probé con una cartola real y los movimientos calzan / I tested it with a real statement and it matches

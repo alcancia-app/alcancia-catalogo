@@ -1,0 +1,6 @@
+__pycache__/
+_alcancia/
+*.csv
+*.xlsx
+*.ofx
+*.qif
