@@ -11,3 +11,6 @@ Nunca subas una cartola real ni datos personales. Al aportar, aceptas que la rec
 [código de conducta de Alcancía](https://github.com/alcancia-app/alcancia/blob/main/CODE_OF_CONDUCT.md).
 
 *English:* share recipes from the app or open a pull request with `recetas/<id>.json`. Never upload real statements. Recipes are CC0.
+
+¿Un problema de seguridad? Avísanos en privado como dice [`SECURITY.md`](SECURITY.md), nunca en un issue público.
+*Security issues: report privately, see [`SECURITY.md`](SECURITY.md).*

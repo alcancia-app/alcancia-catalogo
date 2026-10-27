@@ -1,3 +1,5 @@
+# Seguridad: actions fijadas por SHA (Dependabot las actualiza), token de solo lectura, sin credenciales guardadas en el checkout
+# y nada de pull_request_target: un pull request de afuera corre sin secretos ni permisos de escritura.
 # Cada receta nueva se valida con el código de Alcancía y se revisa que no traiga datos personales.
 name: Revisar
 on:
@@ -10,9 +12,11 @@ permissions:
 jobs:
   recetas:
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
-        with: { repository: alcancia-app/alcancia, path: _alcancia }
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with: { persist-credentials: false }
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with: { repository: alcancia-app/alcancia, path: _alcancia, persist-credentials: false }
       - name: Validar recetas
         run: ALCANCIA=_alcancia python3 herramientas/revisar.py

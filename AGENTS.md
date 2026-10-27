@@ -18,3 +18,8 @@ dicen cómo leer la cartola de un banco o billetera. El formato y la validación
 3. Que `reconocer.encabezados` sean nombres de columna genéricos, no datos de una persona.
 4. Si viene de un issue creado desde la app, pasar el JSON a `recetas/<id>.json` en un PR y cerrar el issue agradeciendo.
 Nunca se junta nada sin la aprobación de quien mantiene el proyecto.
+
+## Seguridad
+`.github/workflows/revisar.yml` corre con `pull_request` (nunca `pull_request_target`), token de solo lectura, actions fijadas por
+SHA (Dependabot, `.github/dependabot.yml`, con `cooldown`) y `persist-credentials: false`. Un PR puede cambiar `herramientas/revisar.py`
+y el workflow: por eso se lee el diff entero antes de aprobar que corra. Reportes en privado: `SECURITY.md`.

@@ -28,6 +28,8 @@ Las recetas son de dominio público ([CC0 1.0](LICENSE)): cualquiera puede usarl
 
 ---
 
+¿Un problema de seguridad? Avísanos en privado: [`SECURITY.md`](SECURITY.md).
+
 ## English
 Community-made **recipes** that teach [Alcancía](https://github.com/alcancia-app/alcancia) how to read bank and wallet statements
 from anywhere in the world. Recipes are data-only JSON files. Share yours from the app (only the recipe is shared, never your
